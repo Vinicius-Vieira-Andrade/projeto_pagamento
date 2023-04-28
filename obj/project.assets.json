@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\53685550837\\.nuget\\packages\\": {}
+    "C:\\Users\\49816214857\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\53685550837\\Desktop\\projeto_pagamento\\projeto_pagamento.csproj",
+      "projectUniqueName": "C:\\Users\\49816214857\\Desktop\\projeto_pagamento\\projeto_pagamento.csproj",
       "projectName": "projeto_pagamento",
-      "projectPath": "C:\\Users\\53685550837\\Desktop\\projeto_pagamento\\projeto_pagamento.csproj",
-      "packagesPath": "C:\\Users\\53685550837\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\53685550837\\Desktop\\projeto_pagamento\\obj\\",
+      "projectPath": "C:\\Users\\49816214857\\Desktop\\projeto_pagamento\\projeto_pagamento.csproj",
+      "packagesPath": "C:\\Users\\49816214857\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\49816214857\\Desktop\\projeto_pagamento\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\53685550837\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\49816214857\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
