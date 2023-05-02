@@ -11,7 +11,7 @@ namespace projeto_pagamento
         {
             if (this.Saldo > 0)
             {
-                Console.WriteLine($"Você tem saldo suficiente. O  valor da compra é {this.Valor}");
+                Console.WriteLine($"Você tem saldo suficiente. O  valor da compra é {this.Valor:C2}");
 
             }
             else
