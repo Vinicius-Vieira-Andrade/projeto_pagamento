@@ -1,3 +1,5 @@
+using System;
+
 namespace projeto_pagamento
 {
     public class Boleto : Pagamento
