@@ -4,9 +4,17 @@ namespace projeto_pagamento
     {
         Random codigoBarras = new Random();
 
-        Console.WriteLine($" 237.00005636.{codigoBarras.Next(900000000).ToString()}.00052636001");
+        public void Registrar()
+        {
 
-Console.WriteLine($"{codigoBarras.Next(30000000)}.{codigoBarras.Next(30000000)}");
+            Console.WriteLine($@" 
+
+            --------------------------------------------------------------------------
+            001 237.00005636.{codigoBarras.Next(900000000).ToString()}.00052636001
+            Valor: {this.Valor * 0.88f}       Dia do Vencimento: {this.DataVencimento}
+            ");
+
+        }
 
     }
 }
