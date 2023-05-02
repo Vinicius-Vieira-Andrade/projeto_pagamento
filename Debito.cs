@@ -7,11 +7,11 @@ namespace projeto_pagamento
 
         public float Saldo { get; private set; }
 
-        public override void Pagamento()
+        public override void Pagar()
         {
             if (this.Saldo > 0)
             {
-                Console.WriteLine($"Você tem saldo suficiente. A compra esta feita.");
+                Console.WriteLine($"Você tem saldo suficiente. O  valor da compra é {this.Valor}");
 
             }
             else
