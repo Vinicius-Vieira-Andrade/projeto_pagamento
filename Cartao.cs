@@ -1,3 +1,5 @@
+using System;
+
 namespace projeto_pagamento
 {
     public abstract class Cartao : Pagamento
