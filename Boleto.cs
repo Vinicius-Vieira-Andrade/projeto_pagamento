@@ -1,6 +1,6 @@
 namespace projeto_pagamento
 {
-    public class Boleto
+    public class Boleto : Pagamento
     {
         public string codigoBarras {get; private set;}
 
