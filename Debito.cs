@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace projeto_pagamento
 {
@@ -10,7 +7,7 @@ namespace projeto_pagamento
 
         public float Saldo { get; private set; }
 
-        public override void Pagar()
+        public override void Pagamento()
         {
             if (this.Saldo > 0)
             {
