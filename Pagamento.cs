@@ -7,7 +7,7 @@ namespace projeto_pagamento
 {
     public class Pagamento
     {
-        public DateTime DataVencimento {get; private set; }
+        public DateTime DataVencimento {get; private set;} = DateTime.Now.Date;
 
         public float Valor { get; set; }
 
