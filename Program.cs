@@ -25,6 +25,9 @@ Console.WriteLine($@"
     ------------------------------------------
 ");
 float valor = float.Parse(Console.ReadLine()!);
+Console.WriteLine($"Produto cadastrado!");
+Console.Beep(1000,500);
+Console.Beep(1000,600);
 
 switch (valor)
  {
@@ -45,6 +48,7 @@ string resposta = Console.ReadLine()!;
 switch (resposta)
 {
     case "1":
+    Console.Beep(1000,500);
     Console.WriteLine($@"
 Boleto selecionado!
 Pagando com boleto você
@@ -54,24 +58,27 @@ terá 12% de desconto
     b1.Registrar();
         break;
         case "2":
+        Console.Beep(1000,500);
         c1.Valor = valor;
         c1.Pagar();
         break;
         case "3":
+        Console.Beep(1000,500);
         d1.Valor = valor;
         d1.Pagar();
         break;
         case "0":
+        Console.Beep(1000,500);
         Console.WriteLine($"Operação cancelada.");
         p1.Cancelar();
         break;
     default:
+    Console.Beep(1000,500);
     Console.WriteLine($"Por favor insira um valor válido para a escolha.");
         goto Volta;
 }
          break;
      default:
      Console.WriteLine($"Por favor insira um valor maior do que R$: 0,00.");
-     
          goto Inicio;
  }
