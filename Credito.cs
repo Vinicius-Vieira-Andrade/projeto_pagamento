@@ -22,18 +22,18 @@ namespace projeto_pagamento
                 {
                     resultado = Valor * 1.05f;
                     resultado2 = resultado / parcela;
-                    Console.WriteLine($"O valor ficará de {resultado.ToString("C", new System.Globalization.CultureInfo("pt-BR"))} e cada parcela ficará {Math.Round(resultado2, 2).ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                    Console.WriteLine($"O valor ficará de {resultado:c2} e cada parcela ficará {Math.Round(resultado2, 2):c2}");
                 }
                 else if (parcela > 6 && parcela <= 12)
                 {
                     resultado = Valor * 1.08f;
                     resultado2 = resultado / parcela;
-                    Console.WriteLine($"O valor ficará de {resultado.ToString("C", new System.Globalization.CultureInfo("pt-BR"))} e cada parcela ficará {Math.Round(resultado2, 2).ToString("C", new System.Globalization.CultureInfo("pt-BR"))}");
+                    Console.WriteLine($"O valor ficará de {resultado:c2} e cada parcela ficará {Math.Round(resultado2, 2):c2}");
                     
                 }
                 else
                 {
-                    Console.WriteLine($"Por favor insira um número de parcela valido!");
+                    Console.WriteLine($"Por favor insira um número valido de parcela!");
                     goto volta;
                 }
             }
