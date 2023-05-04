@@ -15,7 +15,9 @@ namespace projeto_pagamento
             if (Valor <= Limite)
             {
             volta:
-                Console.WriteLine($"Em quantas parcelas você deseja pagar: (Minimo 1 Maximo 12)");
+                Console.WriteLine($@"Em quantas parcelas você deseja pagar: (Minimo 1 Maximo 12)
+pagando em até 6x terá um acréscimo de 5%
+e pagando entre 7x e 12x terá um acréscimo de 8%.");
                 int parcela = int.Parse(Console.ReadLine()!);
 
                 if (parcela <= 6 && parcela > 0)
