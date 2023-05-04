@@ -63,6 +63,17 @@ terá 12% de desconto
         c1.Pagar();
         break;
         case "3":
+
+        Console.WriteLine($"Débito selecionado");
+        Console.WriteLine($"Selecione a Bandeira do cartão:");
+        c1.Bandeira = Console.ReadLine()!;
+        Console.WriteLine($"Selecione o número do cartão:");
+        c1.NumeroCartao = Console.ReadLine()!;
+        Console.WriteLine($"Selecione o titular do cartão:");
+        c1.Titular = Console.ReadLine()!;
+        Console.WriteLine($"Digite o cvv do cartão:");
+        c1.Cvv = Console.ReadLine()!;
+        
         Console.Beep(1000,500);
         d1.Valor = valor;
         d1.Pagar();
