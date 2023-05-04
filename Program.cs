@@ -4,6 +4,7 @@ Boleto b1 = new Boleto();
 Credito c1 = new Credito();
 Debito d1 = new Debito();
 Pagamento p1 = new Pagamento();
+
 //* criar as classes de acordo com o diagrama de classes UML disponibilizado.
 
 // * o programa deve ter um menu com as seguintes opções:
@@ -58,12 +59,6 @@ terá 12% de desconto
     b1.Registrar();
         break;
         case "2":
-        Console.Beep(1000,500);
-        c1.Valor = valor;
-        c1.Pagar();
-        break;
-        case "3":
-
         Console.WriteLine($"Débito selecionado");
         Console.WriteLine($"Selecione a Bandeira do cartão:");
         c1.Bandeira = Console.ReadLine()!;
@@ -73,6 +68,21 @@ terá 12% de desconto
         c1.Titular = Console.ReadLine()!;
         Console.WriteLine($"Digite o cvv do cartão:");
         c1.Cvv = Console.ReadLine()!;
+        Console.Beep(1000,500);
+        c1.Valor = valor;
+        c1.Pagar();
+        break;
+        case "3":
+
+        Console.WriteLine($"Débito selecionado");
+        Console.WriteLine($"Selecione a Bandeira do cartão:");
+        d1.Bandeira = Console.ReadLine()!;
+        Console.WriteLine($"Selecione o número do cartão:");
+        d1.NumeroCartao = Console.ReadLine()!;
+        Console.WriteLine($"Selecione o titular do cartão:");
+        d1.Titular = Console.ReadLine()!;
+        Console.WriteLine($"Digite o cvv do cartão:");
+        d1.Cvv = Console.ReadLine()!;
         
         Console.Beep(1000,500);
         d1.Valor = valor;
