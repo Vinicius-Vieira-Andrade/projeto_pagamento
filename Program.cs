@@ -26,15 +26,18 @@ Console.WriteLine($@"
     ------------------------------------------
 ");
 float valor = float.Parse(Console.ReadLine()!);
-Console.WriteLine($"Produto cadastrado!");
-Console.Beep(1000,500);
-Console.Beep(1000,600);
 
-switch (valor)
- {
-     case (> 0):
-    Volta:
-Console.WriteLine($@"
+bool validacao = true;
+do
+{
+    switch (valor)
+    {
+        case (> 0):
+            Console.WriteLine($"Produto cadastrado!");
+            Console.Beep(1000, 500);
+            Console.Beep(1000, 600);
+        Volta:
+            Console.WriteLine($@"
 ------------------------------------------
 |       Qual a forma de pagamento?       |
 |                                        |
@@ -45,62 +48,76 @@ Console.WriteLine($@"
 |                                        |
 ------------------------------------------
 ");
-string resposta = Console.ReadLine()!;
-switch (resposta)
-{
-    case "1":
-    Console.Beep(1000,500);
-    Console.WriteLine($@"
+            string resposta = Console.ReadLine()!;
+
+            switch (resposta)
+            {
+                case "1":
+                    Console.Beep(1000, 500);
+                    Console.WriteLine($@"
 Boleto selecionado!
 Pagando com boleto você
 terá 12% de desconto
     ");
-    b1.Valor = valor;
-    b1.Registrar();
-        break;
-        case "2":
-        Console.WriteLine($"Débito selecionado");
-        Console.WriteLine($"Selecione a Bandeira do cartão:");
-        c1.Bandeira = Console.ReadLine()!;
-        Console.WriteLine($"Selecione o número do cartão:");
-        c1.NumeroCartao = Console.ReadLine()!;
-        Console.WriteLine($"Selecione o titular do cartão:");
-        c1.Titular = Console.ReadLine()!;
-        Console.WriteLine($"Digite o cvv do cartão:");
-        c1.Cvv = Console.ReadLine()!;
-        Console.Beep(1000,500);
-        c1.Valor = valor;
-        c1.Pagar();
-        break;
-        case "3":
+                    b1.Valor = valor;
+                    b1.Registrar();
+                    validacao = true;
+                    break;
+                case "2":
+                    Console.WriteLine($"Crédito selecionado!");
+                    Console.WriteLine($"Selecione a Bandeira do cartão:");
+                    c1.Bandeira = Console.ReadLine()!;
+                    Console.WriteLine($"Selecione o número do cartão:");
+                    c1.NumeroCartao = Console.ReadLine()!;
+                    Console.WriteLine($"Selecione o titular do cartão:");
+                    c1.Titular = Console.ReadLine()!;
+                    Console.WriteLine($"Digite o cvv do cartão:");
+                    c1.Cvv = Console.ReadLine()!;
+                    Console.Beep(1000, 500);
+                    Console.WriteLine();
+                    Console.WriteLine($"Bandeira: {c1.Bandeira}");
+                    Console.WriteLine($"Número: {c1.NumeroCartao}");
+                    Console.WriteLine($"Nome do titular: {c1.Titular}");
+                    c1.Valor = valor;
+                    c1.Pagar();
+                    validacao = true;
+                    break;
 
-        Console.WriteLine($"Débito selecionado");
-        Console.WriteLine($"Selecione a Bandeira do cartão:");
-        d1.Bandeira = Console.ReadLine()!;
-        Console.WriteLine($"Selecione o número do cartão:");
-        d1.NumeroCartao = Console.ReadLine()!;
-        Console.WriteLine($"Selecione o titular do cartão:");
-        d1.Titular = Console.ReadLine()!;
-        Console.WriteLine($"Digite o cvv do cartão:");
-        d1.Cvv = Console.ReadLine()!;
-        
-        Console.Beep(1000,500);
-        d1.Valor = valor;
-        d1.Pagar();
-        break;
-        case "0":
-        Console.Beep(1000,500);
-        Console.WriteLine($"Operação cancelada.");
-        p1.Cancelar();
-        break;
-    default:
-    Console.Beep(1000,500);
-    Console.WriteLine($"Por favor insira um valor válido para a escolha.");
-        goto Volta;
-}
-         break;
-     default:
-     Console.WriteLine($"Por favor insira um valor maior do que R$: 0,00.");
-     
-         goto Inicio;
- }
+                case "3":
+
+                    Console.WriteLine($"Débito selecionado");
+                    Console.WriteLine($"Selecione a Bandeira do cartão:");
+                    d1.Bandeira = Console.ReadLine()!;
+                    Console.WriteLine($"Selecione o número do cartão:");
+                    d1.NumeroCartao = Console.ReadLine()!;
+                    Console.WriteLine($"Selecione o titular do cartão:");
+                    d1.Titular = Console.ReadLine()!;
+                    Console.WriteLine($"Digite o cvv do cartão:");
+                    d1.Cvv = Console.ReadLine()!;
+
+                    Console.Beep(1000, 500);
+                    Console.WriteLine($"Bandeira: {d1.Bandeira}");
+                    Console.WriteLine($"Número: {d1.NumeroCartao}");
+                    Console.WriteLine($"Nome do titular: {d1.Titular}");
+                    d1.Valor = valor;
+                    d1.Pagar();
+                    validacao = true;
+                    break;
+                case "0":
+                    Console.Beep(1000, 500);
+                    Console.WriteLine($"Operação cancelada.");
+                    p1.Cancelar();
+                    validacao = false;
+                    break;
+                default:
+                    Console.Beep(1000, 500);
+                    Console.WriteLine($"Por favor insira um valor válido para a escolha.");
+                    goto Volta;
+            }
+            break;
+        default:
+            Console.WriteLine($"Por favor insira um valor maior do que R$: 0,00.");
+
+            goto Inicio;
+    }
+} while (validacao == true);

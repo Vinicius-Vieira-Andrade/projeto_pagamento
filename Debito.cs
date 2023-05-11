@@ -5,7 +5,7 @@ namespace projeto_pagamento
     public class Debito : Cartao
     {
 
-        public float Saldo { get; private set; } = 13954;
+        public float Saldo { get; private set; } = 20000;
 
         public override void Pagar()
         {

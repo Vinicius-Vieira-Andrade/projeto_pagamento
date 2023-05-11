@@ -5,13 +5,12 @@ namespace projeto_pagamento
 {
     public class Credito : Cartao
     {
-        public float Limite { get; private set;} = 3500f;
+        public float Limite { get; private set;} = 15000f;
         public override void Pagar()
         {
             float resultado;
             float resultado2;
-
-            Console.WriteLine($"Credito selecionado!");
+    	    Console.WriteLine(); 
             if (Valor <= Limite)
             {
             volta:
